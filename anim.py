@@ -8,13 +8,14 @@ def anim(text):
 		sys.stdout.flush()
 		sys.stdout.write('\b'*(len(text)+5) )
 		time.sleep(0.1)
+		continue
 
 def cleanup(textToclean,newText=None):
 	if newText==None:
 		newText=textToclean
 
 	sys.stdout.write('\b'*(len(textToclean)+5) )
-	sys.stdout.write("clean{}....\n".format(newText))
+	sys.stdout.write("{}........\n".format(newText))
 	exit()
 
 def animate(text):
