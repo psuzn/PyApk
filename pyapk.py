@@ -102,7 +102,10 @@ def main():
 
 
 def kill():
+
 	print("\n\t\t[Installed:{},Failed:{} and Processed:{}]".format(len(installed),len(failed),len(installed)+len(failed)))
+	if len(installed)==0 and len(failed)==0:
+		print("\t\t  The directory provided seems empty")
 	print("Exiting..")
 	exit()
 
