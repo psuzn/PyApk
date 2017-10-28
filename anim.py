@@ -15,7 +15,7 @@ def cleanup(textToclean,newText=None):
 		newText=textToclean
 
 	sys.stdout.write('\b'*(len(textToclean)+5) )
-	sys.stdout.write("{}........\n".format(newText))
+	sys.stdout.write("{}\t\t\n".format(newText))
 	exit()
 
 def animate(text):
