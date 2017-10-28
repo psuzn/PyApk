@@ -1,5 +1,6 @@
 import os,sys,time
 import adboperations as adb
+import anim
 
 directory="/home/suzan/Desktop/apks"
 installed=[]
@@ -14,5 +15,12 @@ def main():
 		print(" ADB is not found..")
 		kill()
 
+def kill():
+	print("\n\n[Installed:{x},Failed:{y} and Processed:{}]".format(x=len(installed),y=len(failed),len(installed)+len(failed)))
+	print("Exiting..")
+	exit()
+
+
 if __name__ == '__main__':
 	main()
+	kill()
