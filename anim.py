@@ -1,6 +1,35 @@
 import subprocess as sp
 import itertools,time,sys,os
 maxCharacter=os.get_terminal_size().columns
+bannerart=\
+"""	
+    /$$$$$$$             /$$$$$$            /$$      
+   | $$__  $$           /$$__  $$          | $$      
+   | $$  \ $$ /$$   /$$| $$  \ $$  /$$$$$$ | $$   /$$
+   | $$$$$$$/| $$  | $$| $$$$$$$$ /$$__  $$| $$  /$$/
+   | $$____/ | $$  | $$| $$__  $$| $$  \ $$| $$$$$$/ 
+   | $$      | $$  | $$| $$  | $$| $$  | $$| $$_  $$ 
+   | $$      |  $$$$$$$| $$  | $$| $$$$$$$/| $$ \  $$
+   |__/       \____  $$|__/  |__/| $$____/ |__/  \__/
+             /$$  | $$          | $$                
+            |  $$$$$$/          | $$                
+             \______/           |__/        [by suzn]
+
+
+                         
+"""
+
+def showBanner():
+	for line in bannerart.splitlines():
+		for i in range(0,len(line)):
+			sys.stdout.write(line[i])
+			sys.stdout.flush()
+			if not line[i]==" ":
+				time.sleep(0.005)
+		sys.stdout.write("\n")
+
+
+
 def anim(text):
 	spinner=itertools.cycle(["|","/","-","\\","|"])
 	while True:
@@ -33,3 +62,4 @@ if __name__ == '__main__':
 
 	elif "cleanup" in sys.argv[1:]:
 		cleanup("".join(sys.argv[2:]))
+

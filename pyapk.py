@@ -74,6 +74,7 @@ def install(root,name):
 
 
 def main():
+	anim.showBanner()
 	print("Checking if adb is installed or not")
 	if adb.exist():#Adb installation check
 		print(" ADB is Installed..")
