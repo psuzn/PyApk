@@ -2,7 +2,7 @@ import os,sys,time
 import adboperations as adb
 import anim
 
-directory="/home/suzan/Desktop/apks"
+directory="apks/"
 installed=[]
 failed=[]
 maxCharacter=os.get_terminal_size().columns
@@ -74,6 +74,10 @@ def install(root,name):
 
 
 def main():
+	if sys.argv[1:]:
+		global directory
+		directory=sys.argv[1]
+
 	anim.showBanner()
 	print("Checking if adb is installed or not")
 	if adb.exist():#Adb installation check

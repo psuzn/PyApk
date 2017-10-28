@@ -14,8 +14,7 @@ bannerart=\
              /$$  | $$          | $$                
             |  $$$$$$/          | $$                
              \______/           |__/        [by suzn]
-
-
+                                      https://github.com/psuzn
                          
 """
 
