@@ -1,6 +1,6 @@
 import subprocess as sp
-import itertools,time,sys
-
+import itertools,time,sys,os
+maxCharacter=os.get_terminal_size().columns
 def anim(text):
 	spinner=itertools.cycle(["|","/","-","\\","|"])
 	while True:
@@ -15,8 +15,9 @@ def cleanup(textToclean,newText=None):
 		newText=textToclean
 
 	sys.stdout.write('\b'*(len(textToclean)+5) )
-	sys.stdout.write("{}\t\t\n".format(newText))
-	exit()
+	for lines in newText.splitlines():
+		sys.stdout.write("{}{}\n".format(lines," "*(maxCharacter-len(lines))))
+	
 
 def animate(text):
 	return sp.Popen(["python3","anim.py","anim" ,text])
