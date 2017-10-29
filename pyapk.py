@@ -1,3 +1,4 @@
+#!/bin/python3
 import os,sys,time
 import adboperations as adb
 import anim
