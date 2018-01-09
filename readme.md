@@ -5,7 +5,7 @@ When you prefer to backup only /data/app/ directory for the applications  rather
 
 I was thinking about creating my own version of inline console animation and also try the subprocess module of python long before. So I decide to try both of those in in this program.
 
-[Demo](https://i.imgur.com/oLAYN2M.gif)
+[![Demo](https://i.imgur.com/oLAYN2M.gif)](https://github.com/psuzn/PyApk)
 
 **Inside it:**
 - The animation on it is in the separate child-process .
