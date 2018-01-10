@@ -1,2 +1,5 @@
 __pycache__/
 test.py
+.eggs/
+pyapk.egg-info/
+dist/
