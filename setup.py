@@ -11,12 +11,6 @@ setup(
     download_url='https://github.com/psuzn/PyApk',
     keywords=['adb', 'apk', 'install', 'android'],  # arbitrary keywords
     install_requires=[
-        'adb',
-        'os',
-        'sys',
-        'time',
-        'subprocess',
-        'itertools'
     ],
     classifiers=[
         'Environment :: Console',
