@@ -1,6 +1,6 @@
 # PyApk
 
-Small python program to install all apks on a directory(including apks in sub-directory of it) in your pc to and
+Small python program to install all apks on a directory(including apks in sub-directory of it) in your pc to android phones.
 
 When you prefer to backup only /data/app/ directory for the applications  rather than entire /data/ partition,it is real pain to install all the apks(50+ in my case) manually.
 
