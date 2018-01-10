@@ -14,7 +14,7 @@ bannerart=\
              /$$  | $$          | $$                
             |  $$$$$$/          | $$                
              \______/           |__/        [by suzn]
-                                      https://github.com/psuzn
+                                      https://github.com/psuzn/PyApk
                          
 """
 
@@ -24,7 +24,7 @@ def showBanner():
 			sys.stdout.write(line[i])
 			sys.stdout.flush()
 			if not line[i]==" ":
-				time.sleep(0.005)
+				time.sleep(0.004)
 		sys.stdout.write("\n")
 
 
@@ -48,17 +48,11 @@ def cleanup(textToclean,newText=None):
 	
 
 def animate(text):
-	return sp.Popen(["python3","anim.py","anim" ,text])
+	return sp.Popen(["pyapk","anim" ,text])
 
 def clean(text):
-	 process=sp.Popen(["python3","anim.py","cleanup",text])
+	 process=sp.Popen(["pyapk","cleanup",text])
 	 while process.poll()==None:
 	 	time.sleep(0.1)
 
-if __name__ == '__main__':
-	if  "anim" in sys.argv[1:]:
-		anim("".join(sys.argv[2:]))
-
-	elif "cleanup" in sys.argv[1:]:
-		cleanup("".join(sys.argv[2:]))
 
