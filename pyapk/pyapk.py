@@ -1,9 +1,10 @@
 #!/bin/python3
 import os,sys,time
-import adboperations as adb
-import anim
+from pyapk import adboperations as adb
+from pyapk import anim
 
-directory="apks/"
+
+directory=''
 installed=[]
 failed=[]
 maxCharacter=os.get_terminal_size().columns
@@ -75,11 +76,15 @@ def install(root,name):
 
 
 def main():
-	if sys.argv[1:]:
-		global directory
-		directory=sys.argv[1]
-
+	global directory
 	anim.showBanner()
+	if '-c' in sys.argv[1:]:
+		directory=os.getcwd()
+	elif '-d' in sys.argv[1:]:
+		directory=sys.argv[2]
+	else:
+		return
+
 	print("Checking if adb is installed or not")
 	if adb.exist():#Adb installation check
 		print(" ADB is Installed..")
@@ -111,8 +116,10 @@ def kill():
 	exit()
 
 def pyapkInit():
-	main()
-	kill()
-
-if __name__ == '__main__':
-	pyapkInit()
+	if  "anim" in sys.argv[1:]:
+		anim.anim("".join(sys.argv[2:]))
+	elif "cleanup" in sys.argv[1:]:
+		anim.cleanup("".join(sys.argv[2:]))
+	else:
+		main()
+		kill()
