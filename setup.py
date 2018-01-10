@@ -20,7 +20,7 @@ setup(
     ],
     classifiers=[
         'Environment :: Console',
-        'Intended Audience :: Android Geeks',
+        'Intended Audience :: Information Technology',
         'License :: OSI Approved :: MIT License',
         'Operating System :: OS Independent',
         'Programming Language :: Python',
