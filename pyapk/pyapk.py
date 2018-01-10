@@ -110,7 +110,9 @@ def kill():
 	print("Exiting..")
 	exit()
 
-
-if __name__ == '__main__':
+def pyapkInit():
 	main()
 	kill()
+
+if __name__ == '__main__':
+	pyapkInit()
