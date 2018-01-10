@@ -1,6 +1,6 @@
 import subprocess as sp
-import sys,time,anim,os
-
+import sys,time,os
+from pyapk import anim
 maxCharacter=os.get_terminal_size().columns
 
 def exist():
