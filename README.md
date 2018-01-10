@@ -1,7 +1,6 @@
 # PyApk
-Small python program to install all apks on a directory(including apks in sub-directory of it) in your pc to android phone using Android Debugging Bridge(ADB) interface.
 
-
+Small python program to install all apks on a directory(including apks in sub-directory of it) in your pc to and
 
 When you prefer to backup only /data/app/ directory for the applications  rather than entire /data/ partition,it is real pain to install all the apks(50+ in my case) manually.
 
@@ -13,7 +12,6 @@ I was thinking about creating my own version of inline console animation and als
 - Separate child-process animation .
 - Nice console log output (at least for me).
 - It installs all the apks in a directory including apks on sub-directory (of course it does).
-
 
 
 **Way to install it:**
