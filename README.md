@@ -24,7 +24,7 @@ OR
 - install with python setup.py
 ```
 $ git clone https://github.com/psuzn/PyApk.git
-$ cd PyApk && sudo python setup.py
+$ cd PyApk && sudo python setup.py install
 ```
 
 **How to use it:**
